@@ -11,72 +11,76 @@ const Membership = () => {
     const pricingPlans = [
         {
             duration: '1 Month',
-            price: '₹3,000',
+            price: '₹2,999',
+            gst: '+ GST',
             features: ['Access to all equipment', 'Group classes included', 'Locker facilities', 'Free fitness assessment'],
         },
         {
+            duration: '2 Months',
+            price: '₹5,499',
+            gst: '+ GST',
+            features: ['Everything in 1 Month', 'Group classes included', 'Locker facilities', 'Priority class booking'],
+        },
+        {
             duration: '3 Months',
-            price: '₹7,500',
-            discount: 'Save ₹1,500',
-            features: ['Everything in 1 Month', '1 personal training session', 'Nutrition guidance basics', 'Priority class booking'],
+            price: '₹8,599',
+            gst: '+ GST',
+            features: ['Everything in 2 Months', '1 personal training session', 'Nutrition guidance basics', 'Body composition analysis'],
+        },
+        {
+            duration: '4 Months',
+            price: '₹9,999',
+            gst: '+ GST',
+            features: ['Everything in 3 Months', '2 personal training sessions', 'Detailed meal plans', 'Guest pass (1 entry)'],
+        },
+        {
+            duration: '5 Months',
+            price: '₹12,599',
+            gst: '+ GST',
+            features: ['Everything in 4 Months', '3 personal training sessions', 'Monthly nutrition check-ins', 'Guest pass (2 entries)'],
         },
         {
             duration: '6 Months',
-            price: '₹13,500',
-            discount: 'Save ₹4,500',
+            price: '₹14,999',
+            gst: '+ GST',
             featured: true,
-            features: ['Everything in 3 Months', '3 personal training sessions', 'Detailed meal plans', 'Body composition analysis', 'Guest pass (2 entries)'],
+            features: ['Everything in 5 Months', '4 personal training sessions', 'Detailed meal plans', 'Body composition analysis', 'Guest pass (3 entries)'],
+        },
+        {
+            duration: '8 Months',
+            price: '₹21,000',
+            gst: '+ GST',
+            features: ['Everything in 6 Months', '5 personal training sessions', 'Monthly nutrition check-ins', 'Guest pass (4 entries)', 'Transfer/freeze option'],
+        },
+        {
+            duration: '10 Months',
+            price: '₹25,599',
+            gst: '+ GST',
+            features: ['Everything in 8 Months', '6 personal training sessions', 'Bi-weekly nutrition check-ins', 'Free merchandise', 'Guest pass (5 entries)'],
         },
         {
             duration: '12 Months',
-            price: '₹24,000',
-            discount: 'Save ₹12,000',
-            features: ['Everything in 6 Months', '6 personal training sessions', 'Monthly nutrition check-ins', 'Free merchandise', 'Transfer/freeze option (1 month)', 'Guest pass (4 entries)'],
+            price: '₹28,999',
+            gst: '+ GST',
+            features: ['Everything in 10 Months', '8 personal training sessions', 'Monthly nutrition check-ins', 'Free merchandise', 'Transfer/freeze option (1 month)', 'Guest pass (6 entries)'],
         },
         {
-            duration: 'Couple - 3 Months',
-            price: '₹12,000',
-            discount: 'Save ₹3,000',
-            features: ['2 memberships included', 'All group classes', 'Shared personal training (2 sessions)', 'Couple workout plans'],
+            duration: '15 Months',
+            price: '₹34,999',
+            gst: '+ GST',
+            features: ['Everything in 12 Months', '10 personal training sessions', 'Bi-weekly nutrition support', 'Premium merchandise', 'Transfer/freeze option (2 months)', 'Guest pass (8 entries)'],
         },
         {
-            duration: 'Couple - 6 Months',
-            price: '₹22,000',
-            discount: 'Save ₹5,000',
-            features: ['2 memberships included', 'Shared personal training (4 sessions)', 'Nutrition plans for both', 'Priority support'],
+            duration: '18 Months',
+            price: '₹39,999',
+            gst: '+ GST',
+            features: ['Everything in 15 Months', '12 personal training sessions', 'Weekly nutrition support', 'Premium merchandise', 'Transfer/freeze option (2 months)', 'Guest pass (10 entries)'],
         },
         {
-            duration: 'Student (3 Months)',
-            price: '₹6,000',
-            discount: '20% Off Regular',
-            features: ['Valid student ID required', 'All standard amenities', 'Group classes', 'Study-friendly hours'],
-        },
-        {
-            duration: 'Student (6 Months)',
-            price: '₹11,000',
-            discount: '18% Off Regular',
-            features: ['Valid student ID required', 'Everything in 3 months', '2 personal training sessions', 'Flexible freeze policy'],
-        },
-        {
-            duration: 'Corporate (10+ Members)',
-            price: 'Custom',
-            features: ['Bulk pricing available', 'Customized wellness programs', 'On-site sessions option', 'Health assessment reports', 'Dedicated account manager'],
-        },
-        {
-            duration: 'Senior Citizen (3 Months)',
-            price: '₹5,500',
-            discount: '25% Off',
-            features: ['Age 60+ only', 'Low-impact classes', 'Supervised workouts', 'Joint-friendly equipment'],
-        },
-        {
-            duration: 'Day Pass',
-            price: '₹300',
-            features: ['Single-day access', 'All equipment', 'Group classes', 'Locker and shower'],
-        },
-        {
-            duration: 'Personal Training (10 Sessions)',
-            price: '₹15,000',
-            features: ['1-on-1 coaching', 'Customized workout plan', 'Nutrition guidance', 'Progress tracking', 'Flexible scheduling'],
+            duration: '24 Months',
+            price: '₹55,999',
+            gst: '+ GST',
+            features: ['Everything in 18 Months', '16 personal training sessions', 'Dedicated nutrition coach', 'Premium merchandise kit', 'Transfer/freeze option (3 months)', 'Unlimited guest passes', 'VIP member benefits'],
         },
     ];
 
@@ -112,9 +116,9 @@ const Membership = () => {
                                 <div className="pricing-header">
                                     <h3 className="pricing-duration">{plan.duration}</h3>
                                     <div className="pricing-amount">
-                                        {plan.price} {plan.price !== 'Custom' && <span>/total</span>}
+                                        {plan.price} {plan.price !== 'Custom' && plan.gst && <span style={{ fontSize: '0.9rem', fontWeight: '600' }}> {plan.gst}</span>}
                                     </div>
-                                    {plan.discount && <p className="pricing-gst">{plan.discount}</p>}
+                                    {!plan.gst && plan.discount && <p className="pricing-gst">{plan.discount}</p>}
                                 </div>
                                 <ul className="pricing-features">
                                     {plan.features.map((feature, idx) => (

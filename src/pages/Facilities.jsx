@@ -160,6 +160,24 @@ const Facilities = () => {
 
             {/* Equipment Showcase */}
             <section style={{ padding: '5rem 0', background: '#0a0a0a' }}>
+                <style>{`
+                    @media (max-width: 768px) {
+                        .equipment-grid-item {
+                            grid-template-columns: 1fr !important;
+                            padding: 2rem 1.5rem !important;
+                            gap: 2rem !important;
+                        }
+                        .equipment-grid-item > div {
+                            order: 2 !important;
+                        }
+                        .equipment-grid-item img {
+                            height: 250px !important;
+                        }
+                        .equipment-title {
+                            font-size: 1.8rem !important;
+                        }
+                    }
+                `}</style>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <h2 style={{ fontSize: '3rem', fontWeight: '900', color: '#fff', marginBottom: '1rem' }}>
@@ -174,9 +192,10 @@ const Facilities = () => {
                         {equipment.map((item, index) => (
                             <div
                                 key={index}
+                                className="equipment-grid-item"
                                 style={{
                                     display: 'grid',
-                                    gridTemplateColumns: index % 2 === 0 ? '1fr 1fr' : '1fr 1fr',
+                                    gridTemplateColumns: '1fr 1fr',
                                     gap: '3rem',
                                     alignItems: 'center',
                                     background: 'linear-gradient(135deg, #1a1a1a, #0f0f0f)',
@@ -200,7 +219,7 @@ const Facilities = () => {
                                 </div>
 
                                 <div style={{ order: index % 2 === 0 ? 2 : 1 }}>
-                                    <h3 style={{
+                                    <h3 className="equipment-title" style={{
                                         fontSize: '2.2rem',
                                         fontWeight: '900',
                                         color: '#ff0033',

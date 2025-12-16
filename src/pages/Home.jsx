@@ -179,10 +179,6 @@ const Home = () => {
                             <div className="highlight-number">15+</div>
                             <div className="highlight-label">Expert Trainers</div>
                         </div>
-                        <div className="highlight-item">
-                            <div className="highlight-number">1000+</div>
-                            <div className="highlight-label">Happy Members</div>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -473,6 +469,27 @@ const Home = () => {
 
             {/* Success Stories / Transformations */}
             <section style={{ padding: '5rem 0', background: '#fff' }}>
+                <style>{`
+                    @media (max-width: 768px) {
+                        .success-stories-grid {
+                            grid-template-columns: 1fr !important;
+                            padding: 0 1rem !important;
+                            gap: 2rem !important;
+                        }
+                        .success-story-card {
+                            padding: 1.5rem !important;
+                        }
+                        .success-story-img {
+                            height: 250px !important;
+                        }
+                        .success-story-title {
+                            font-size: 1.8rem !important;
+                        }
+                        .success-story-stats {
+                            gap: 1rem !important;
+                        }
+                    }
+                `}</style>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <p style={{ color: '#ff0033', fontSize: '0.9rem', fontWeight: '700', letterSpacing: '2px', marginBottom: '0.5rem' }}>
@@ -486,9 +503,9 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem' }}>
+                    <div className="success-stories-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem' }}>
                         {/* Transformation Story 1 */}
-                        <div style={{
+                        <div className="success-story-card" style={{
                             background: 'linear-gradient(135deg, #f5f5f5, #fff)',
                             borderRadius: '20px',
                             overflow: 'hidden',
@@ -507,11 +524,11 @@ const Home = () => {
                                 e.currentTarget.style.borderColor = 'transparent';
                             }}
                         >
-                            <img src="/transformation1.png" alt="Transformation" style={{ width: '100%', height: '300px', objectFit: 'cover' }} />
-                            <div style={{ padding: '2rem' }}>
+                            <img className="success-story-img" src="/transformation1.png" alt="Transformation" style={{ width: '100%', height: '300px', objectFit: 'cover' }} />
+                            <div className="success-story-card" style={{ padding: '2rem' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                                     <div>
-                                        <h3 style={{ fontSize: '1.5rem', fontWeight: '900', color: '#0a0a0a', marginBottom: '0.25rem' }}>
+                                        <h3 className="success-story-title" style={{ fontSize: '1.5rem', fontWeight: '900', color: '#0a0a0a', marginBottom: '0.25rem' }}>
                                             Rajesh Kumar
                                         </h3>
                                         <p style={{ color: '#ff0033', fontSize: '0.9rem', fontWeight: '700' }}>
@@ -522,7 +539,7 @@ const Home = () => {
                                 <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '1rem' }}>
                                     "I never thought I could transform my body at 35. The trainers at Atlas Fitness Elite created a personalized plan that fit my lifestyle. The results speak for themselves!"
                                 </p>
-                                <div style={{ display: 'flex', gap: '2rem', paddingTop: '1rem', borderTop: '1px solid #eee' }}>
+                                <div className="success-story-stats" style={{ display: 'flex', gap: '2rem', paddingTop: '1rem', borderTop: '1px solid #eee' }}>
                                     <div>
                                         <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>25kg</div>
                                         <div style={{ fontSize: '0.85rem', color: '#999' }}>Weight Lost</div>
@@ -692,6 +709,77 @@ const Home = () => {
                                 View Membership Plans
                             </Link>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Google Maps Section */}
+            <section style={{ padding: '0', background: '#0a0a0a' }}>
+                <div style={{ textAlign: 'center', padding: '3rem 0 2rem', background: '#0a0a0a' }}>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: '900', color: '#fff', marginBottom: '0.5rem' }}>
+                        Find Us Here
+                    </h2>
+                    <p style={{ color: '#999', fontSize: '1.1rem' }}>
+                        Visit our premium facility in Mallapur, Hyderabad
+                    </p>
+                </div>
+                <div style={{ position: 'relative', width: '100%', height: '500px', overflow: 'hidden' }}>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.4237837937846!2d78.55853680707648!3d17.423869369056408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a1c6e98d5c7%3A0x8e4db9e4e4e4e4e4!2sAtlas%20Fitness%20Elite!5e0!3m2!1sen!2sin!4v1734335540000!5m2!1sen!2sin"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, filter: 'grayscale(0.2) contrast(1.1)' }}
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Atlas Fitness Elite Location"
+                    ></iframe>
+                    {/* Overlay with gym branding */}
+                    <div style={{
+                        position: 'absolute',
+                        top: '20px',
+                        left: '20px',
+                        background: 'rgba(10, 10, 10, 0.9)',
+                        backdropFilter: 'blur(10px)',
+                        padding: '1.5rem 2rem',
+                        borderRadius: '12px',
+                        border: '2px solid #ff0033',
+                        maxWidth: '350px',
+                        boxShadow: '0 10px 40px rgba(0,0,0,0.5)'
+                    }}>
+                        <h3 style={{
+                            color: '#fff',
+                            fontSize: '1.5rem',
+                            fontWeight: '900',
+                            marginBottom: '0.5rem'
+                        }}>
+                            Atlas<span style={{ color: '#ff0033' }}>FIT</span>
+                        </h3>
+                        <p style={{ color: '#ccc', fontSize: '0.95rem', lineHeight: '1.6', margin: 0 }}>
+                            📍 New Narsina Nagar, Mallapur<br />
+                            Hyderabad, Telangana 500076
+                        </p>
+                        <a
+                            href="https://maps.app.goo.gl/Hx3sMA2D937azJWPA"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                display: 'inline-block',
+                                marginTop: '1rem',
+                                padding: '0.8rem 1.5rem',
+                                background: '#ff0033',
+                                color: '#fff',
+                                textDecoration: 'none',
+                                borderRadius: '6px',
+                                fontSize: '0.9rem',
+                                fontWeight: '700',
+                                transition: 'all 0.3s ease'
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.background = '#cc0029'}
+                            onMouseLeave={(e) => e.currentTarget.style.background = '#ff0033'}
+                        >
+                            Get Directions →
+                        </a>
                     </div>
                 </div>
             </section>

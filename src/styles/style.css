@@ -123,15 +123,14 @@ a {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 0, 51, 0.2);
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     transition: all var(--transition-normal);
 }
 
 .navbar.scrolled {
-    background: rgba(10, 10, 10, 0.98);
-    box-shadow: 0 4px 30px rgba(255, 0, 51, 0.3);
+    background: #ffffff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .nav-content {
@@ -171,12 +170,17 @@ a {
 }
 
 .logo-text {
-    color: var(--color-white);
+    color: var(--color-black);
+    transition: all var(--transition-normal);
+}
+
+.logo-text:hover {
+    text-shadow: 0 0 20px rgba(255, 0, 51, 0.8),
+        0 0 40px rgba(255, 0, 51, 0.5);
 }
 
 .logo-accent {
-    color: var(--color-red);
-    text-shadow: var(--shadow-glow-red);
+    color: var(--color-black);
 }
 
 .nav-links {
@@ -189,7 +193,7 @@ a {
     font-family: var(--font-primary);
     font-weight: 600;
     font-size: 0.95rem;
-    color: var(--color-gray-300);
+    color: #000000;
     position: relative;
     transition: all var(--transition-fast);
     letter-spacing: 0.5px;
@@ -208,7 +212,7 @@ a {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--color-white);
+    color: #000000;
 }
 
 .nav-link:hover::after,
@@ -545,7 +549,7 @@ a {
 .slider-track {
     display: flex;
     gap: var(--spacing-md);
-    animation: slideshow 30s linear infinite;
+    animation: slideshow 10s linear infinite;
     will-change: transform;
 }
 
@@ -706,6 +710,11 @@ a {
     font-size: 1.8rem;
     font-weight: 900;
     margin-bottom: var(--spacing-sm);
+    color: #ffffff;
+}
+
+.footer-title .logo-accent {
+    color: #ffffff;
 }
 
 .footer-text {
@@ -852,16 +861,21 @@ a {
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
-        top: 80px;
+        top: 60px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 60px);
         background: rgba(10, 10, 10, 0.98);
         flex-direction: column;
         padding: var(--spacing-lg);
         gap: var(--spacing-md);
         transition: left var(--transition-normal);
         border-top: 1px solid rgba(255, 0, 51, 0.3);
+    }
+
+    .nav-links .nav-link {
+        color: #ffffff !important;
+        font-size: 1.2rem;
     }
 
     .nav-links.active {
@@ -918,6 +932,33 @@ a {
     .highlight-number {
         font-size: 2.5rem;
     }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero-section {
+        min-height: 70vh !important;
+    }
+
+    .hero-content {
+        padding: 2rem 1rem !important;
+    }
+
+    .motivation-grid,
+    .highlights-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -942,23 +983,22 @@ a {
         height: 200px;
     }
 }
+
 /* Show mobile join button on mobile */
 @media (max-width: 768px) {
     .mobile-join-btn {
         display: block !important;
+        margin: 0 auto !important;
+        text-align: center;
     }
 }
+
 /* Desktop: Push Join Now button to the right */
 @media (min-width: 769px) {
     .nav-links .mobile-join-btn {
         margin-left: auto;
         margin-right: 1rem;
     }
-}
-
-/* Move Join Now button more to the right */
-.nav-links .mobile-join-btn {
-    margin-left: 3rem !important;
 }
 
 /* Keep nav links on single line */
@@ -980,7 +1020,7 @@ a {
     .footer-title img {
         height: 30px !important;
     }
-    
+
     .footer-title {
         font-size: 1.5rem !important;
         display: flex !important;
@@ -996,36 +1036,40 @@ a {
     opacity: 1 !important;
 }
 
-/* Mirror/Glass effect for navbar */
+/* Solid white navbar */
 .navbar {
-    background: rgba(10, 10, 10, 0.7) !important;
-    backdrop-filter: blur(15px) !important;
-    -webkit-backdrop-filter: blur(15px) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
 .navbar.scrolled {
-    background: rgba(10, 10, 10, 0.85) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
+    background: #ffffff !important;
 }
 
 /* Increase logo size */
 .logo-image {
-    height: 70px !important;
+    height: 90px !important;
     width: auto !important;
 }
 
 .logo-text {
-    font-size: 2.2rem !important;
+    font-size: 2rem !important;
 }
 
 @media (max-width: 768px) {
     .logo-image {
-        height: 50px !important;
+        height: 40px !important;
     }
-    
+
     .logo-text {
-        font-size: 1.6rem !important;
+        font-size: 1.2rem !important;
+    }
+
+    .navbar {
+        padding: 0.5rem 0 !important;
+    }
+
+    .nav-content {
+        padding: 0.5rem 0 !important;
     }
 }

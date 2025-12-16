@@ -213,7 +213,7 @@ const Contact = () => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="message">Message</label>
+                                    <label htmlFor="message">Message (Optional)</label>
                                     <textarea
                                         id="message"
                                         name="message"
@@ -407,7 +407,7 @@ const Contact = () => {
                 </div>
                 <div style={{ position: 'relative', width: '100%', height: '500px', overflow: 'hidden' }}>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.8471234567!2d78.5587!3d17.4238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI1JzI1LjciTiA3OMKwMzMnMzEuMyJF!5e0!3m2!1sen!2sin!4v1234567890"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.4237837937846!2d78.55853680707648!3d17.423869369056408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a1c6e98d5c7%3A0x8e4db9e4e4e4e4e4!2sAtlas%20Fitness%20Elite!5e0!3m2!1sen!2sin!4v1734335540000!5m2!1sen!2sin"
                         width="100%"
                         height="100%"
                         style={{ border: 0, filter: 'grayscale(0.2) contrast(1.1)' }}
@@ -442,7 +442,7 @@ const Contact = () => {
                             Hyderabad, Telangana 500076
                         </p>
                         <a
-                            href="https://maps.google.com/?q=New+Narsina+Nagar+Mallapur+Hyderabad+500076"
+                            href="https://maps.app.goo.gl/Hx3sMA2D937azJWPA"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{

@@ -25,7 +25,7 @@ const Navbar = () => {
                         <Link to="/">
                             <img src="/logo.png" alt="Atlas Fitness Elite Logo" className="logo-image" />
                             <span className="logo-text">
-                                ATLAS<span className="logo-accent">FIT</span>
+                                ATLAS<span className="logo-accent">FITNESS</span>
                             </span>
                         </Link>
                     </div>

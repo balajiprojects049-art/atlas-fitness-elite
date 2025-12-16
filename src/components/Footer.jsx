@@ -8,17 +8,16 @@ const Footer = () => {
                     <div className="footer-section">
                         <h3 className="footer-title">
                             <img
-                                src="/logo.png"
+                                src="/footer-logo.png"
                                 alt="Atlas Fitness Elite"
                                 style={{
-                                    height: '40px',
+                                    height: '100px',
                                     width: 'auto',
                                     verticalAlign: 'middle',
                                     marginRight: '10px',
-                                    filter: 'brightness(0) invert(1)',
                                 }}
                             />
-                            Atlas<span className="logo-accent">Fit</span>
+                            ATLAS<span className="logo-accent">FITNESS</span>
                         </h3>
                         <p className="footer-text">
                             Empowering transformations through expert guidance, innovative workouts, and community
