@@ -23,7 +23,7 @@ const Navbar = () => {
                 <div className="nav-content">
                     <div className="logo">
                         <Link to="/">
-                            <img src="/logo.png" alt="Atlas Fitness Elite Logo" className="logo-image" />
+                            <img src="/footer-logo.png" alt="Atlas Fitness Elite Logo" className="logo-image" />
                             <span className="logo-text">
                                 ATLAS<span className="logo-accent">FITNESS</span>
                             </span>

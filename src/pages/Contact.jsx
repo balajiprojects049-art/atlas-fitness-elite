@@ -407,7 +407,7 @@ const Contact = () => {
                 </div>
                 <div style={{ position: 'relative', width: '100%', height: '500px', overflow: 'hidden' }}>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.4237837937846!2d78.55853680707648!3d17.423869369056408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a1c6e98d5c7%3A0x8e4db9e4e4e4e4e4!2sAtlas%20Fitness%20Elite!5e0!3m2!1sen!2sin!4v1734335540000!5m2!1sen!2sin"
+                        src="https://maps.google.com/maps?q=3-4-98/4/204,+New+Narsina+Nagar,+Mallapur,+Hyderabad,+Telangana+500076&z=15&output=embed"
                         width="100%"
                         height="100%"
                         style={{ border: 0, filter: 'grayscale(0.2) contrast(1.1)' }}
@@ -438,7 +438,7 @@ const Contact = () => {
                             Atlas<span style={{ color: '#ff0033' }}>FIT</span>
                         </h3>
                         <p style={{ color: '#ccc', fontSize: '0.95rem', lineHeight: '1.6', margin: 0 }}>
-                            📍 New Narsina Nagar, Mallapur<br />
+                            📍 3-4-98/4/204, New Narsina Nagar, Mallapur<br />
                             Hyderabad, Telangana 500076
                         </p>
                         <a

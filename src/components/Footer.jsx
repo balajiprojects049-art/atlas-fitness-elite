@@ -89,7 +89,7 @@ const Footer = () => {
                         <h4 className="footer-heading">Contact Info</h4>
                         <ul className="footer-links">
                             <li>
-                                📍 New Narsina Nagar, Mallapur
+                                📍 3-4-98/4/204, New Narsina Nagar, Mallapur
                                 <br />
                                 &nbsp;&nbsp;&nbsp;&nbsp;Hyderabad, Telangana 500076
                             </li>

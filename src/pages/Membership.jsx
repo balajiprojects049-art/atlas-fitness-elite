@@ -146,15 +146,8 @@ const Membership = () => {
                             <div className="addon-icon">🥗</div>
                             <h3 className="addon-name">Nutrition Consult</h3>
                             <p className="addon-description">
-                                Personalized meal plans and dietary guidance - ₹2,000/month
-                            </p>
-                        </div>
-
-                        <div className="addon-card">
-                            <div className="addon-icon">📊</div>
-                            <h3 className="addon-name">Body Composition Scan</h3>
-                            <p className="addon-description">
-                                Advanced InBody analysis to track muscle, fat, and hydration - ₹500/scan
+                                Personalized meal plans and dietary guidance - ₹3,999/month,
+                                Specialized nutritionist consultation,personalized meal plans and dietary guidance
                             </p>
                         </div>
 
@@ -170,7 +163,7 @@ const Membership = () => {
                             <div className="addon-icon">🎒</div>
                             <h3 className="addon-name">Locker Rental</h3>
                             <p className="addon-description">
-                                Secure personal locker for 24/7 access - ₹500/month
+                                Secure personal locker for 24/7 access
                             </p>
                         </div>
 
@@ -186,7 +179,7 @@ const Membership = () => {
                             <div className="addon-icon">🏆</div>
                             <h3 className="addon-name">Transformation Challenge</h3>
                             <p className="addon-description">
-                                8-week intensive program with coaching, tracking, and prizes - ₹8,000
+                                8-week intensive program with coaching, tracking.
                             </p>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -27,6 +27,19 @@ const Home = () => {
 
         return () => observer.disconnect();
     }, []);
+
+    const [manojHover, setManojHover] = useState(false);
+    const manojImages = [
+        '/manoj-transformation1.jpg',
+        '/manoj-transformation2.jpg'
+    ];
+
+    const [rohanHover, setRohanHover] = useState(false);
+    const rohanImages = [
+        '/rohan-transformation1.jpg',
+        '/rohan-transformation2.jpg',
+        '/rohan-transformation3.jpg'
+    ];
 
     return (
         <>
@@ -91,32 +104,28 @@ const Home = () => {
                             <div className="motivation-icon">💪</div>
                             <h3 className="motivation-title">Elite Coaching</h3>
                             <p className="motivation-text">
-                                Certified trainers with proven track records. Personalized plans designed to push
-                                your limits and deliver real, measurable results.
+                                Work with trainers who truly care about your progress. We don't just hand you a plan; we teach you proper form and keep you on track to reach your goals.
                             </p>
                         </div>
                         <div className="motivation-card">
                             <div className="motivation-icon">🏋️</div>
                             <h3 className="motivation-title">Premium Equipment</h3>
                             <p className="motivation-text">
-                                Top-tier machines, Olympic-standard gear, functional training zones. Everything you
-                                need to crush your workouts under one roof.
+                                We've stocked the floor with everything you need heavy lifting rigs, smooth cardio machines, and plenty of space. No broken gear, no waiting around.
                             </p>
                         </div>
                         <div className="motivation-card">
                             <div className="motivation-icon">👥</div>
                             <h3 className="motivation-title">Community Spirit</h3>
                             <p className="motivation-text">
-                                Train alongside motivated individuals. Group sessions, challenges, and a culture that
-                                celebrates every victory—big or small.
+                                We're more than just a gym we're a team. You'll find a friendly, competitive vibe here where everyone is working hard and cheering each other on.
                             </p>
                         </div>
                         <div className="motivation-card">
                             <div className="motivation-icon">✅</div>
                             <h3 className="motivation-title">Proven Results</h3>
                             <p className="motivation-text">
-                                Track your progress with precision. From body composition to strength gains, see your
-                                transformation unfold week by week.
+                                Forget the temporary fixes. We focus on consistent training and sustainable habits to help you build a stronger, healthier body that lasts.
                             </p>
                         </div>
                     </div>
@@ -168,7 +177,7 @@ const Home = () => {
                 <div className="container">
                     <div className="highlights-grid">
                         <div className="highlight-item">
-                            <div className="highlight-number">2500+</div>
+                            <div className="highlight-number">4000+</div>
                             <div className="highlight-label">Sq. Ft. Space</div>
                         </div>
                         <div className="highlight-item">
@@ -198,7 +207,7 @@ const Home = () => {
             <section className="instagram-section" style={{ padding: '4rem 0', background: '#f5f5f5' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                        <p style={{ color: '#ff0033', fontSize: '0.9rem', fontWeight: '700', letterSpacing: '2px', marginBottom: '0.5rem' }}>⭐⭐⭐</p>
+                        <p style={{ color: '#ff0033', fontSize: '0.9rem', fontWeight: '700', letterSpacing: '2px', marginBottom: '0.5rem' }}>⭐⭐⭐⭐⭐</p>
                         <p style={{ color: '#666', fontSize: '0.95rem', fontWeight: '600', marginBottom: '0.5rem' }}>ATLAS FITNESS ELITE</p>
                         <h2 style={{ fontSize: '2.5rem', fontWeight: '900', color: '#0a0a0a', marginBottom: '1.5rem', textTransform: 'uppercase' }}>
                             Authentic, Athletic<br />Members
@@ -524,39 +533,63 @@ const Home = () => {
                                 e.currentTarget.style.borderColor = 'transparent';
                             }}
                         >
-                            <img className="success-story-img" src="/transformation1.png" alt="Transformation" style={{ width: '100%', height: '300px', objectFit: 'cover' }} />
+                            <div style={{ position: 'relative', width: '100%', height: '300px', overflow: 'hidden' }}>
+                                <div style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    backgroundImage: 'url(/akhil-transformation-final.jpg)',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    filter: 'blur(25px) brightness(0.6)',
+                                    transform: 'scale(1.2)'
+                                }}></div>
+                                <img
+                                    src="/akhil-transformation-final.jpg"
+                                    alt="Akhil Transformation"
+                                    style={{
+                                        position: 'relative',
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'contain',
+                                        zIndex: 1
+                                    }}
+                                />
+                            </div>
                             <div className="success-story-card" style={{ padding: '2rem' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                                     <div>
                                         <h3 className="success-story-title" style={{ fontSize: '1.5rem', fontWeight: '900', color: '#0a0a0a', marginBottom: '0.25rem' }}>
-                                            Rajesh Kumar
+                                            Akhil
                                         </h3>
                                         <p style={{ color: '#ff0033', fontSize: '0.9rem', fontWeight: '700' }}>
-                                            Lost 25 kg in 6 months
+                                            98kg to 70kg Transformation
                                         </p>
                                     </div>
                                 </div>
                                 <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '1rem' }}>
-                                    "I never thought I could transform my body at 35. The trainers at Atlas Fitness Elite created a personalized plan that fit my lifestyle. The results speak for themselves!"
+                                    "Achieved a pure muscle mass transformation from 98kg to 70kg! The key was a great diet plan and consistent training that completely reshaped my physique."
                                 </p>
                                 <div className="success-story-stats" style={{ display: 'flex', gap: '2rem', paddingTop: '1rem', borderTop: '1px solid #eee' }}>
                                     <div>
-                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>25kg</div>
-                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Weight Lost</div>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>28kg</div>
+                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Lost</div>
                                     </div>
                                     <div>
-                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>6</div>
-                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Months</div>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>Pure</div>
+                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Muscle Mass</div>
                                     </div>
                                     <div>
-                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>15%</div>
-                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Body Fat</div>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>100%</div>
+                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Diet Focus</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Transformation Story 2 */}
+                        {/* Transformation Story 2 - Manoj */}
                         <div style={{
                             background: 'linear-gradient(135deg, #f5f5f5, #fff)',
                             borderRadius: '20px',
@@ -569,46 +602,94 @@ const Home = () => {
                                 e.currentTarget.style.transform = 'translateY(-10px)';
                                 e.currentTarget.style.boxShadow = '0 15px 50px rgba(255,0,51,0.6)';
                                 e.currentTarget.style.borderColor = '#ff0033';
+                                setManojHover(true);
                             }}
                             onMouseLeave={(e) => {
                                 e.currentTarget.style.transform = 'translateY(0)';
                                 e.currentTarget.style.boxShadow = '0 10px 40px rgba(0,0,0,0.1)';
                                 e.currentTarget.style.borderColor = 'transparent';
+                                setManojHover(false);
                             }}
                         >
-                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800" alt="Success Story" style={{ width: '100%', height: '300px', objectFit: 'cover' }} />
+                            <div style={{ position: 'relative', height: '300px', width: '100%', overflow: 'hidden' }}>
+                                <div style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    backgroundImage: `url(${manojHover ? manojImages[1] : manojImages[0]})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    filter: 'blur(25px) brightness(0.6)',
+                                    transform: 'scale(1.2)',
+                                    transition: 'background-image 0.5s ease-in-out'
+                                }}></div>
+                                <img
+                                    src={manojHover ? manojImages[1] : manojImages[0]}
+                                    alt="Manoj Transformation"
+                                    style={{
+                                        position: 'relative',
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'contain',
+                                        transition: 'opacity 0.5s ease-in-out',
+                                        zIndex: 1
+                                    }}
+                                />
+                                <div style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    background: 'rgba(0,0,0,0.4)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    opacity: manojHover ? 1 : 0,
+                                    transition: 'all 0.3s ease',
+                                    zIndex: 2
+                                }}>
+                                    <h4 style={{ color: '#fff', fontSize: '1.5rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '2px', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
+                                        DIAMOND
+                                    </h4>
+                                    <p style={{ color: '#ffd700', fontWeight: '700', fontSize: '1.1rem' }}>PHYSIQUE</p>
+                                </div>
+                            </div>
                             <div style={{ padding: '2rem' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                                     <div>
                                         <h3 style={{ fontSize: '1.5rem', fontWeight: '900', color: '#0a0a0a', marginBottom: '0.25rem' }}>
-                                            Priya Sharma
+                                            Manoj
                                         </h3>
                                         <p style={{ color: '#ff0033', fontSize: '0.9rem', fontWeight: '700' }}>
-                                            Gained 8kg Muscle Mass
+                                            Diamond Physique Transformation
                                         </p>
                                     </div>
                                 </div>
                                 <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '1rem' }}>
-                                    "From skinny to strong! The strength training program helped me build confidence and muscle. I feel powerful and energized every day!"
+                                    "Turned my body into a diamond-like structure through pure dedication and hard work. It's been a very successful story of resilience and pushing limits every single day."
                                 </p>
                                 <div style={{ display: 'flex', gap: '2rem', paddingTop: '1rem', borderTop: '1px solid #eee' }}>
                                     <div>
-                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>+8kg</div>
-                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Muscle Gain</div>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>100%</div>
+                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Dedication</div>
                                     </div>
                                     <div>
-                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>4</div>
-                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Months</div>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>Elite</div>
+                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Physique</div>
                                     </div>
                                     <div>
-                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>45kg</div>
-                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Deadlift PR</div>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>Hard</div>
+                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Work</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Transformation Story 3 */}
+                        {/* Transformation Story 3 - Rohan */}
                         <div style={{
                             background: 'linear-gradient(135deg, #f5f5f5, #fff)',
                             borderRadius: '20px',
@@ -621,40 +702,88 @@ const Home = () => {
                                 e.currentTarget.style.transform = 'translateY(-10px)';
                                 e.currentTarget.style.boxShadow = '0 15px 50px rgba(255,0,51,0.6)';
                                 e.currentTarget.style.borderColor = '#ff0033';
+                                setRohanHover(true);
                             }}
                             onMouseLeave={(e) => {
                                 e.currentTarget.style.transform = 'translateY(0)';
                                 e.currentTarget.style.boxShadow = '0 10px 40px rgba(0,0,0,0.1)';
                                 e.currentTarget.style.borderColor = 'transparent';
+                                setRohanHover(false);
                             }}
                         >
-                            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800" alt="Fitness Achievement" style={{ width: '100%', height: '300px', objectFit: 'cover' }} />
+                            <div style={{ position: 'relative', height: '300px', width: '100%', overflow: 'hidden' }}>
+                                <div style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    backgroundImage: `url(${rohanHover ? rohanImages[2] : rohanImages[0]})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    filter: 'blur(25px) brightness(0.6)',
+                                    transform: 'scale(1.2)',
+                                    transition: 'background-image 0.5s ease-in-out'
+                                }}></div>
+                                <img
+                                    src={rohanHover ? rohanImages[2] : rohanImages[0]}
+                                    alt="Rohan Transformation"
+                                    style={{
+                                        position: 'relative',
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'contain',
+                                        transition: 'opacity 0.5s ease-in-out',
+                                        zIndex: 1
+                                    }}
+                                />
+                                <div style={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    background: 'rgba(0,0,0,0.4)',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    opacity: rohanHover ? 1 : 0,
+                                    transition: 'all 0.3s ease',
+                                    zIndex: 2
+                                }}>
+                                    <h4 style={{ color: '#fff', fontSize: '1.5rem', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '2px', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
+                                        TRANSFORMED
+                                    </h4>
+                                    <p style={{ color: '#ffd700', fontWeight: '700', fontSize: '1.1rem' }}>PURE DEDICATION</p>
+                                </div>
+                            </div>
                             <div style={{ padding: '2rem' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                                     <div>
                                         <h3 style={{ fontSize: '1.5rem', fontWeight: '900', color: '#0a0a0a', marginBottom: '0.25rem' }}>
-                                            Arjun Reddy
+                                            Rohan
                                         </h3>
                                         <p style={{ color: '#ff0033', fontSize: '0.9rem', fontWeight: '700' }}>
-                                            Completed First Marathon
+                                            Years of Consistent Focus
                                         </p>
                                     </div>
                                 </div>
                                 <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '1rem' }}>
-                                    "I went from couch potato to marathon runner! The cardio and HIIT programs built my endurance from zero to hero. Couldn't have done it without this amazing team!"
+                                    "Transformed my body through endless years of training. It was all about being consistent, focused, and completely dedicated to this lifestyle."
                                 </p>
                                 <div style={{ display: 'flex', gap: '2rem', paddingTop: '1rem', borderTop: '1px solid #eee' }}>
                                     <div>
-                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>42km</div>
-                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Marathon</div>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>Focus</div>
+                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Mindset</div>
                                     </div>
                                     <div>
-                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>5</div>
-                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Months</div>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>Elite</div>
+                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Dedication</div>
                                     </div>
                                     <div>
-                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>3:45</div>
-                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Finish Time</div>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>100%</div>
+                                        <div style={{ fontSize: '0.85rem', color: '#999' }}>Consistent</div>
                                     </div>
                                 </div>
                             </div>
@@ -725,7 +854,7 @@ const Home = () => {
                 </div>
                 <div style={{ position: 'relative', width: '100%', height: '500px', overflow: 'hidden' }}>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.4237837937846!2d78.55853680707648!3d17.423869369056408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a1c6e98d5c7%3A0x8e4db9e4e4e4e4e4!2sAtlas%20Fitness%20Elite!5e0!3m2!1sen!2sin!4v1734335540000!5m2!1sen!2sin"
+                        src="https://maps.google.com/maps?q=3-4-98/4/204,+New+Narsina+Nagar,+Mallapur,+Hyderabad,+Telangana+500076&z=15&output=embed"
                         width="100%"
                         height="100%"
                         style={{ border: 0, filter: 'grayscale(0.2) contrast(1.1)' }}
@@ -756,7 +885,7 @@ const Home = () => {
                             Atlas<span style={{ color: '#ff0033' }}>FIT</span>
                         </h3>
                         <p style={{ color: '#ccc', fontSize: '0.95rem', lineHeight: '1.6', margin: 0 }}>
-                            📍 New Narsina Nagar, Mallapur<br />
+                            📍 3-4-98/4/204, New Narsina Nagar, Mallapur<br />
                             Hyderabad, Telangana 500076
                         </p>
                         <a
