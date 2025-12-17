@@ -2,7 +2,7 @@
 const WhatsAppButton = () => {
     return (
         <a
-            href="https://wa.me/447944295352?text=Hi!%20I%27m%20interested%20in%20joining%20Atlas%20Fitness%20Elite"
+            href="https://wa.me/919988229441?text=Hi!%20I%27m%20interested%20in%20joining%20Atlas%20Fitness%20Elite"
             target="_blank"
             rel="noopener noreferrer"
             style={{

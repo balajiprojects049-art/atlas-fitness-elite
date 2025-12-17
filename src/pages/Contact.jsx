@@ -27,7 +27,7 @@ const Contact = () => {
             `*Message:* ${formData.message}`;
 
         // Open WhatsApp with pre-filled message
-        window.open(`https://wa.me/447944295352?text=${message}`, '_blank');
+        window.open(`https://wa.me/919988229441?text=${message}`, '_blank');
 
         // Reset form
         setFormData({
@@ -373,7 +373,7 @@ const Contact = () => {
                                 📞 Call Us
                             </a>
                             <a
-                                href="https://wa.me/447944295352"
+                                href="https://wa.me/919988229441"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{
