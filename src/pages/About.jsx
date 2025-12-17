@@ -140,7 +140,7 @@ const About = () => {
             </section>
 
             {/* Trainer Profiles */}
-            <section style={{ padding: '5rem 0', background: '#fff' }}>
+            {/* <section style={{ padding: '5rem 0', background: '#fff' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <p style={{ color: '#ff0033', fontSize: '0.9rem', fontWeight: '700', letterSpacing: '2px', marginBottom: '0.5rem' }}>
@@ -322,7 +322,7 @@ const About = () => {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* CTA Section */}
             <section className="cta-section">

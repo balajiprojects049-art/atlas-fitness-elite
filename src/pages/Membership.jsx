@@ -103,36 +103,91 @@ const Membership = () => {
                     <p>
                         No matter your goals or budget, Atlas Fitness Elite offers flexible membership options.
                         From single months to annual commitments, and specialized plans for students, couples,
-                        and corporate groups—we've got you covered.
+                        and corporate groups we've got you covered.
                     </p>
                 </div>
             </section>
 
             <section className="pricing-section">
                 <div className="container">
-                    <div className="pricing-grid">
-                        {pricingPlans.map((plan, index) => (
-                            <div key={index} className={`pricing-card ${plan.featured ? 'featured' : ''}`}>
-                                <div className="pricing-header">
-                                    <h3 className="pricing-duration">{plan.duration}</h3>
-                                    <div className="pricing-amount">
-                                        {plan.price} {plan.price !== 'Custom' && plan.gst && <span style={{ fontSize: '0.9rem', fontWeight: '600' }}> {plan.gst}</span>}
-                                    </div>
-                                    {!plan.gst && plan.discount && <p className="pricing-gst">{plan.discount}</p>}
+                    {new Date() < new Date('2026-01-16') ? (
+                        <div style={{
+                            textAlign: 'center',
+                            padding: '6rem 2rem',
+                            background: 'linear-gradient(135deg, rgba(26,26,26,0.9), rgba(0,0,0,0.8))',
+                            borderRadius: '20px',
+                            border: '1px solid #333',
+                            boxShadow: '0 20px 50px rgba(0,0,0,0.5)'
+                        }}>
+                            <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🔒</div>
+                            <h2 style={{
+                                fontSize: '2.5rem',
+                                fontWeight: '900',
+                                color: '#fff',
+                                marginBottom: '1rem',
+                                textTransform: 'uppercase',
+                                letterSpacing: '1px'
+                            }}>
+                                Membership Plans
+                            </h2>
+                            <h3 style={{
+                                fontSize: '1.5rem',
+                                color: '#ff0033',
+                                fontWeight: '700',
+                                marginBottom: '2rem'
+                            }}>
+                                REVEALING ON JANUARY 16, 2026
+                            </h3>
+                            <p style={{
+                                color: '#ccc',
+                                maxWidth: '600px',
+                                margin: '0 auto',
+                                fontSize: '1.1rem',
+                                lineHeight: '1.8'
+                            }}>
+                                We are crafting the ultimate membership experience for you.
+                                Get ready for exclusive founder rates and benefits that redefine fitness.
+                            </p>
+                            <div style={{ marginTop: '3rem' }}>
+                                <div style={{
+                                    display: 'inline-block',
+                                    padding: '1rem 3rem',
+                                    border: '2px solid #ff0033',
+                                    borderRadius: '50px',
+                                    color: '#fff',
+                                    fontWeight: '700',
+                                    letterSpacing: '2px',
+                                    fontSize: '0.9rem'
+                                }}>
+                                    STAY TUNED
                                 </div>
-                                <ul className="pricing-features">
-                                    {plan.features.map((feature, idx) => (
-                                        <li key={idx}>{feature}</li>
-                                    ))}
-                                </ul>
-                                <Link to="/contact" className="btn btn-primary" style={{ width: '100%' }}>
-                                    {plan.price === 'Custom' ? 'Contact Us' : 'Choose Plan'}
-                                </Link>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ) : (
+                        <div className="pricing-grid">
+                            {pricingPlans.map((plan, index) => (
+                                <div key={index} className={`pricing-card ${plan.featured ? 'featured' : ''}`}>
+                                    <div className="pricing-header">
+                                        <h3 className="pricing-duration">{plan.duration}</h3>
+                                        <div className="pricing-amount">
+                                            {plan.price} {plan.price !== 'Custom' && plan.gst && <span style={{ fontSize: '0.9rem', fontWeight: '600' }}> {plan.gst}</span>}
+                                        </div>
+                                        {!plan.gst && plan.discount && <p className="pricing-gst">{plan.discount}</p>}
+                                    </div>
+                                    <ul className="pricing-features">
+                                        {plan.features.map((feature, idx) => (
+                                            <li key={idx}>{feature}</li>
+                                        ))}
+                                    </ul>
+                                    <Link to="/contact" className="btn btn-primary" style={{ width: '100%' }}>
+                                        {plan.price === 'Custom' ? 'Contact Us' : 'Choose Plan'}
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
-            </section>
+            </section >
 
             <section className="addons-section">
                 <div className="container">
@@ -180,6 +235,30 @@ const Membership = () => {
                             <h3 className="addon-name">Transformation Challenge</h3>
                             <p className="addon-description">
                                 8-week intensive program with coaching, tracking.
+                            </p>
+                        </div>
+
+                        <div className="addon-card">
+                            <div className="addon-icon">🍱</div>
+                            <h3 className="addon-name">Atlas Desi Fuel</h3>
+                            <p className="addon-description">
+                                <strong>Ghar ka Khana, Videshi Macros:</strong> Subscription-based Desi Tiffin service. Protein-rich Roti, Dal, and Masala Oats crafted by nutritionists.
+                            </p>
+                        </div>
+
+                        <div className="addon-card">
+                            <div className="addon-icon">🏋️</div>
+                            <h3 className="addon-name">Personal Training 1-on-1</h3>
+                            <p className="addon-description">
+                                Dedicated coaching sessions to fast-track your goals.
+                            </p>
+                        </div>
+
+                        <div className="addon-card">
+                            <div className="addon-icon">🎟️</div>
+                            <h3 className="addon-name">Guest Access</h3>
+                            <p className="addon-description">
+                                Bring a friend or family member to train with you.
                             </p>
                         </div>
                     </div>

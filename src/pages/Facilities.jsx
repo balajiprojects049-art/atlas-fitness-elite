@@ -141,6 +141,49 @@ const Facilities = () => {
         }
     ];
 
+    const amenities = [
+        {
+            icon: '🚿',
+            title: 'Premium Locker Rooms',
+            description: 'Spacious changing facilities with secure lockers, hot showers, and grooming stations'
+        },
+        {
+            icon: '❄️',
+            title: 'Climate Controlled',
+            description: 'Advanced HVAC system maintaining perfect temperature year-round for optimal training'
+        },
+        {
+            icon: '💧',
+            title: 'Hydration Stations',
+            description: 'Filtered water fountains and refill stations throughout the facility'
+        },
+        {
+            icon: '🎵',
+            title: 'Motivational Sound System',
+            description: 'Premium audio setup with energizing playlists to fuel your workouts'
+        },
+        {
+            icon: '📱',
+            title: 'Wi-Fi & Charging',
+            description: 'High-speed internet and charging stations for your convenience'
+        },
+        {
+            icon: '🏆',
+            title: 'Achievement Wall',
+            description: 'Celebrate member milestones and personal records with our community board'
+        },
+        {
+            icon: '🧘',
+            title: 'Recovery Zone',
+            description: 'Designated area with foam rollers, massage guns, and stretching stations'
+        },
+        {
+            icon: '🚗',
+            title: 'Valet Parking',
+            description: 'Hassle-free complimentary valet service for all premium members'
+        },
+    ];
+
     return (
         <>
             <Navbar />
@@ -277,6 +320,61 @@ const Facilities = () => {
                 </div>
             </section>
 
+            {/* Atlas Fuel Café Section */}
+            <section style={{ padding: '5rem 0', background: '#fff' }}>
+                <div className="container">
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+                        <div>
+                            <img
+                                src="/cafe-machines.jpg"
+                                alt="Atlas Fuel & Recovery Café"
+                                style={{
+                                    width: '100%',
+                                    borderRadius: '20px',
+                                    boxShadow: '0 20px 60px rgba(0,0,0,0.15)'
+                                }}
+                            />
+                        </div>
+                        <div>
+                            <span style={{ color: '#ff0033', fontWeight: '800', letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '1rem' }}>
+                                Videshi Standards, Desi Taste
+                            </span>
+                            <h2 style={{ fontSize: '3rem', fontWeight: '900', color: '#0a0a0a', marginBottom: '1.5rem', lineHeight: '1.1' }}>
+                                Atlas Fuel Café
+                            </h2>
+                            <p style={{ fontSize: '1.1rem', color: '#555', marginBottom: '2rem', lineHeight: '1.6' }}>
+                                Experience the perfect blend of International nutrition and <strong>Desi Swad</strong>.
+                                Our UK-trained chefs know that deep down, we all crave that authentic taste.
+                                We bring you <strong>Ghar-style</strong> meals with a scientific twist zero insulin spikes, 100% taste.
+                            </p>
+
+                            <ul style={{ display: 'grid', gap: '1rem' }}>
+                                <li style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.05rem', color: '#333', borderBottom: '1px solid #eee', paddingBottom: '0.5rem' }}>
+                                    <span style={{ color: '#ff0033', fontSize: '1.2rem' }}>☕</span>
+                                    <span><strong>Kadak Chai & Gourmet Coffee:</strong> The kick you need, without the sugar crash.</span>
+                                </li>
+                                <li style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.05rem', color: '#333', borderBottom: '1px solid #eee', paddingBottom: '0.5rem' }}>
+                                    <span style={{ color: '#ff0033', fontSize: '1.2rem' }}>🥗</span>
+                                    <span><strong>Desi Power Bowls:</strong> High protein Paneer Tikka, Soya Chaap & Grilled Chicken.</span>
+                                </li>
+                                <li style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.05rem', color: '#333', borderBottom: '1px solid #eee', paddingBottom: '0.5rem' }}>
+                                    <span style={{ color: '#ff0033', fontSize: '1.2rem' }}>�</span>
+                                    <span><strong>Guilt Free Mithai:</strong> Cakes & Indian Sweets made with Monk Fruit (Zero Sugar).</span>
+                                </li>
+                                <li style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.05rem', color: '#333', borderBottom: '1px solid #eee', paddingBottom: '0.5rem' }}>
+                                    <span style={{ color: '#ff0033', fontSize: '1.2rem' }}>👨‍🍳</span>
+                                    <span><strong>Global Experience, Local Masala:</strong> Crafted by Expert UK Chefs.</span>
+                                </li>
+                                <li style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.05rem', color: '#333' }}>
+                                    <span style={{ color: '#ff0033', fontSize: '1.2rem' }}>🏥</span>
+                                    <span><strong>Shuddh & Safe:</strong> Medical Grade Purity & Hygiene Standards.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Facility Features */}
             <section style={{ padding: '5rem 0', background: '#f5f5f5' }}>
                 <div className="container">
@@ -291,38 +389,7 @@ const Facilities = () => {
                         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                         gap: '2rem'
                     }}>
-                        {[
-                            {
-                                icon: '🚿',
-                                title: 'Premium Locker Rooms',
-                                description: 'Spacious changing facilities with secure lockers, hot showers, and grooming stations'
-                            },
-                            {
-                                icon: '❄️',
-                                title: 'Climate Controlled',
-                                description: 'Advanced HVAC system maintaining perfect temperature year-round for optimal training'
-                            },
-                            {
-                                icon: '💧',
-                                title: 'Hydration Stations',
-                                description: 'Filtered water fountains and refill stations throughout the facility'
-                            },
-                            {
-                                icon: '🎵',
-                                title: 'Motivational Sound System',
-                                description: 'Premium audio setup with energizing playlists to fuel your workouts'
-                            },
-                            {
-                                icon: '📱',
-                                title: 'Wi-Fi & Charging',
-                                description: 'High-speed internet and charging stations for your convenience'
-                            },
-                            {
-                                icon: '🏆',
-                                title: 'Achievement Wall',
-                                description: 'Celebrate member milestones and personal records with our community board'
-                            }
-                        ].map((amenity, index) => (
+                        {amenities.map((amenity, index) => (
                             <div
                                 key={index}
                                 style={{

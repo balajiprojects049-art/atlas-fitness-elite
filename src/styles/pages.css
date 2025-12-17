@@ -560,21 +560,25 @@
     border-color: var(--color-yellow);
     transform: scale(1.05);
     box-shadow: 0 20px 60px rgba(255, 215, 0, 0.4);
+    padding-top: 3.5rem;
 }
 
 .pricing-card.featured::before {
     content: 'MOST POPULAR';
     position: absolute;
-    top: 20px;
-    right: -30px;
-    background: linear-gradient(135deg, var(--color-yellow), var(--color-yellow-dark));
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, var(--color-yellow), var(--color-yellow-dark));
     color: var(--color-black);
-    padding: 0.4rem 3rem;
+    text-align: center;
+    padding: 0.5rem 0;
     font-weight: 900;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    transform: rotate(45deg);
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    transform: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .pricing-card:hover {
