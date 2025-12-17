@@ -30,8 +30,8 @@ const Home = () => {
 
     const [akhilHover, setAkhilHover] = useState(false);
     const akhilImages = [
-        '/akhil-transformation-final.jpg',
-        '/akhil-transformation-hover.jpg'
+        '/akhil-transformation-hover.jpg',
+        '/akhil-transformation-final.jpg'
     ];
 
     const [manojHover, setManojHover] = useState(false);
@@ -42,9 +42,8 @@ const Home = () => {
 
     const [rohanHover, setRohanHover] = useState(false);
     const rohanImages = [
-        '/rohan-transformation1.jpg',
-        '/rohan-transformation2.jpg',
-        '/rohan-transformation3.jpg'
+        '/rohan-white.jpg',
+        '/rohan-blue.jpg'
     ];
 
     return (
@@ -598,7 +597,7 @@ const Home = () => {
                                     height: '100%',
                                     backgroundImage: `url(${akhilHover ? akhilImages[1] : akhilImages[0]})`,
                                     backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
+                                    backgroundPosition: 'top',
                                     filter: 'blur(25px) brightness(0.6)',
                                     transform: 'scale(1.2)',
                                     transition: 'background-image 0.5s ease-in-out'
@@ -611,6 +610,7 @@ const Home = () => {
                                         width: '100%',
                                         height: '100%',
                                         objectFit: 'cover',
+                                        objectPosition: 'top',
                                         zIndex: 1,
                                         transition: 'opacity 0.5s ease-in-out'
                                     }}
@@ -795,7 +795,7 @@ const Home = () => {
                                     left: 0,
                                     width: '100%',
                                     height: '100%',
-                                    backgroundImage: `url(${rohanHover ? rohanImages[2] : rohanImages[0]})`,
+                                    backgroundImage: `url(${rohanHover ? rohanImages[1] : rohanImages[0]})`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     filter: 'blur(25px) brightness(0.6)',
@@ -803,7 +803,7 @@ const Home = () => {
                                     transition: 'background-image 0.5s ease-in-out'
                                 }}></div>
                                 <img
-                                    src={rohanHover ? rohanImages[2] : rohanImages[0]}
+                                    src={rohanHover ? rohanImages[1] : rohanImages[0]}
                                     alt="Rohan Transformation"
                                     style={{
                                         position: 'relative',
