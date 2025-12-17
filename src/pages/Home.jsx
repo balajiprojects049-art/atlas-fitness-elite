@@ -31,7 +31,7 @@ const Home = () => {
     const [akhilHover, setAkhilHover] = useState(false);
     const akhilImages = [
         '/akhil-transformation-hover.jpg',
-        '/akhil-transformation-final.jpg'
+        '/akhil-transformation-3.jpg'
     ];
 
     const [manojHover, setManojHover] = useState(false);
@@ -809,7 +809,8 @@ const Home = () => {
                                         position: 'relative',
                                         width: '100%',
                                         height: '100%',
-                                        objectFit: 'contain',
+                                        objectFit: 'cover',
+                                        objectPosition: rohanHover ? '50% 20%' : 'top',
                                         transition: 'opacity 0.5s ease-in-out',
                                         zIndex: 1
                                     }}
