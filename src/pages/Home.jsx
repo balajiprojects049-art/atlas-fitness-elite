@@ -637,7 +637,7 @@ const Home = () => {
                                             Akhil
                                         </h3>
                                         <p style={{ color: '#ff0033', fontSize: '0.9rem', fontWeight: '700' }}>
-                                            98kg to 70kg Transformation
+                                            60kg to 70kg Transformation
                                         </p>
                                     </div>
                                 </div>
@@ -648,12 +648,12 @@ const Home = () => {
                                     transition: 'max-height 0.4s ease-out, opacity 0.4s ease-in'
                                 }}>
                                     <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '1rem' }}>
-                                        "Achieved a pure muscle mass transformation from 98kg to 70kg! The key was a great diet plan and consistent training that completely reshaped my physique."
+                                        "Gained 10kg of pure muscle mass, transforming from 60kg to 70kg! The key was a great diet plan and consistent training that completely reshaped my physique."
                                     </p>
                                     <div className="success-story-stats" style={{ display: 'flex', gap: '2rem', paddingTop: '1rem', borderTop: '1px solid #eee' }}>
                                         <div>
-                                            <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>28kg</div>
-                                            <div style={{ fontSize: '0.85rem', color: '#999' }}>Lost</div>
+                                            <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>10kg</div>
+                                            <div style={{ fontSize: '0.85rem', color: '#999' }}>Gained</div>
                                         </div>
                                         <div>
                                             <div style={{ fontSize: '1.5rem', fontWeight: '900', color: '#ff0033' }}>Pure</div>
