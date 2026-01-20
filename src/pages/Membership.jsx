@@ -110,7 +110,7 @@ const Membership = () => {
 
             <section className="pricing-section">
                 <div className="container">
-                    {new Date() < new Date('2026-01-16') ? (
+                    {new Date() < new Date('2026-03-10') ? (
                         <div style={{
                             textAlign: 'center',
                             padding: '6rem 2rem',
@@ -136,7 +136,7 @@ const Membership = () => {
                                 fontWeight: '700',
                                 marginBottom: '2rem'
                             }}>
-                                REVEALING ON JANUARY 16, 2026
+                                REVEALING ON MARCH 10, 2026
                             </h3>
                             <p style={{
                                 color: '#ccc',
